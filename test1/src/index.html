@@ -1,0 +1,139 @@
+
+<!doctype html>
+<html lang="en" class="h-100" data-bs-theme="auto">
+  <head>
+    <title>Bhavya Detroja - Test 1</title>
+    <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../src/css/app.css" rel="stylesheet">
+  </head>
+  <body class="d-flex flex-column h-100">
+
+    <header>
+      <!-- Fixed navbar -->
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Adam Kunz</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Begin page content -->
+    <main class="flex-shrink-0">
+      <div class="container">
+        <h1 class="mt-5">Sticky footer with fixed navbar</h1>
+        <p class="lead">Pin a footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added with <code class="small">padding-top: 60px;</code> on the <code class="small">main &gt; .container</code>.</p>
+        <p>Back to <a href="/docs/5.3/examples/sticky-footer/">the default sticky footer</a> minus the navbar.</p>
+      </div>
+      <div class="container">
+        <table id="test-table" class="table table-striped">
+          <thead>
+            <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Student Number</th>
+           </tr>
+          </thead>
+          <tbody>
+
+            
+            <tr class="table-warning">
+              <td>Adam</td>
+              <td>Kunz</td>
+              <td>199399699</td>
+            </tr>
+            <tr class="table-dark">
+              <td>John</td>
+              <td>Doe</td>
+              <td>111874392</td>
+            </tr>
+            <tr>
+              <td>Alice</td>
+              <td>Bobberts</td>
+              <td>199399699</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="container">
+          <div class="row">
+              <div class="col">
+                  
+                <img src="https://via.placeholder.com/300x200" data-src="holder.js/300x200" class="img-fluid" alt="Placeholder Image">
+              </div>
+          </div>
+      </div>
+      </div>
+    </main>
+
+    <footer class="footer mt-auto py-3 bg-body-tertiary">
+      <div class="container">
+        <span class="text-body-secondary">Place sticky footer content here.</span>
+      </div>
+    </footer>
+    <script>
+    var testTable = document.getElementById('test-table');
+
+    var secondRow = testTable.querySelector('tbody tr:nth-child(3)');
+    secondRow.cells[2].textContent = '100898589';
+
+    var myInfoRow = document.createElement('tr');
+
+    
+    var firstNameCell = document.createElement('td');
+    firstNameCell.textContent = 'Bhavya'; 
+    myInfoRow.appendChild(firstNameCell);
+
+    
+    var lastNameCell = document.createElement('td');
+    lastNameCell.textContent = 'Detroja '; 
+    myInfoRow.appendChild(lastNameCell);
+
+    
+    var studentNumberCell = document.createElement('td');
+    studentNumberCell.textContent = '100898589'; 
+    myInfoRow.appendChild(studentNumberCell);
+
+   
+    var testTableBody = document.querySelector('#test-table tbody');
+    testTableBody.appendChild(myInfoRow);
+
+    var aliceRow = testTableBody.querySelector('tr:nth-child(3)'); 
+
+    aliceRow.parentNode.removeChild(aliceRow);
+
+    myInfoRow.classList.add('table-info');
+
+    var adamRow = testTableBody.querySelector('tr:nth-child(1)');
+
+    adamRow.classList.remove('table-warning');
+
+    var johnRow = testTableBody.querySelector('tr:nth-child(2)');
+
+    johnRow.classList.remove('table-dark');
+    johnRow.classList.add('table-success');
+    </script>
+
+    <script src="./js/app_solution.js"></script>
+    <script src="../node_modules/holderjs/holder.min.js"></script>
+    <script src="node_modules/holderjs/holder.min.js"></script>
+  </body>
+</html>
