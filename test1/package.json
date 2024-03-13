@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^5.3.3",
-    "browsersync": "^3.0.2",
+    "browser-sync": "^3.0.2",
     "holderjs": "^2.9.9",
     "jquery": "^3.7.1",
     "package.json": "^0.0.0"
