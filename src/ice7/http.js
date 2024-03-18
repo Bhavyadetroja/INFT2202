@@ -4,7 +4,7 @@ const PORT = 5000;
 
 export const server = http.createServer((request,response)=> {
     const{url,method} = request;
-    console.log('[${new Date().toISOString()}] ${method} ${url}');
+    console.log(`[${new Date().toISOString()}] ${method} ${url}`);
 
     if (url ==='/ ' && method ==='GET'){
         response.end('Home Page');
