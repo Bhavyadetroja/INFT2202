@@ -1,14 +1,14 @@
 {
-  "name": "test1",
+  "name": "inft2202",
   "version": "1.0.0",
   "description": "This is INFT2202",
-  "main": "src/ice7/app.js",
+  "main": "",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon src/ice7/app.js"
+    "start": "browser-sync start --server --files src/**/*"
   },
-  "author": "",
+  "author": "Bhavya Detroja",
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^5.3.3",
@@ -17,7 +17,8 @@
     "holder": "^0.0.0",
     "holderjs": "^2.9.9",
     "jquery": "^3.7.1",
-    "package.json": "^0.0.0"
+    "package.json": "^0.0.0",
+    "winston": "^3.12.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.0"

@@ -1,5 +1,6 @@
 import express from 'express';
-import { readJson } from './script.js';
+import { readJson } from './utils/script.js';
+import { logger } from './utils/logging.js';
 
 const PORT = 5000;
 const app = express();
@@ -12,10 +13,13 @@ app.use(express.static('..'));
 //     res.writeHead(200,{'Content-type': 'text/plain'});
 //     res.end('Hello World!!!');
 // })
-app.get('/about',(req,res) => {
-    res.writeHead(200,{'Content-type': 'text/plain'});
-    res.end('This is me ');
+logger.log({
+    level:'info',
+    message: 'tester'
 })
+app.get('/about', AboutController
+   
+)
 app.get('/product', async (req,res) => {
     const json = await readJson('./products.json');
     res.writeHead(200,{'Content-type': 'text/plain'});

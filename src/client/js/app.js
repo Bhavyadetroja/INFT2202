@@ -95,7 +95,7 @@ let app;
             location.href = "projects.html";
         }); */
 
-        document.title = "WEBD6201 - Home";
+        document.title = "INFT2202 - Home";
 
         let progressbar = $( "#progressBar" ).progressbar({
             value: 37
@@ -116,22 +116,22 @@ let app;
 
     function DisplayProductsContent()
     {
-        document.title = "WEBD6201 - Products";
+        document.title = "INFT2202 - Products";
     }
 
     function DisplayServicesContent()
     {
-        document.title = "WEBD6201 - Services";
+        document.title = "INFT2202 - Services";
     }
 
     function DisplayAboutContent()
     {
-        document.title = "WEBD6201 - About Us";
+        document.title = "INFT2202 - About Us";
     }
 
     function DisplayContactContent()
     {
-        document.title = "WEBD6201 - Contact Us";
+        document.title = "INFT2202 - Contact Us";
         function clearForm()
         {
             //document.getElementById("contactForm").reset();
@@ -251,12 +251,12 @@ let app;
 
     function DisplayProjectsContent()
     {
-        document.title = "WEBD6201 - Projects";
+        document.title = "INFT2202 - Projects";
     }
 
     function DisplayLoginContent()
     {
-        document.title = "WEBD6201 - Login";
+        document.title = "INFT2202 - Login";
 
         $("#loginForm").submit  ((e)=>
         {
@@ -273,7 +273,7 @@ let app;
 
     function DisplayRegisterContent()
     {
-        document.title = "WEBD6201 - Register";
+        document.title = "INFT2202 - Register";
         function validateInput(selector, condition, errorMessage)
         {
             if(condition)
