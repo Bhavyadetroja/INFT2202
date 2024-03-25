@@ -23,3 +23,12 @@ if (process.env.NODE_ENV !== 'production') {
     format: winston.format.simple(),
   }));
 }
+
+export const RequstLogger = (req,res,next)=>{
+  const {url, method } =req;
+  logger,log({
+    level: 'info',
+    message: `[${new Date().toISOString()}]${method} ${url}`
+  });
+  next();
+}

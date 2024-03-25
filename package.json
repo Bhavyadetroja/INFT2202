@@ -2,17 +2,19 @@
   "name": "inft2202",
   "version": "1.0.0",
   "description": "This is INFT2202",
-  "main": "",
+  "main": "./src/server/app.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "browser-sync start --server --files src/**/*"
+    "start": "nodemon ./src/server/app.js"
+    
   },
   "author": "Bhavya Detroja",
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^5.3.3",
     "browser-sync": "^3.0.2",
+    "ejs": "^3.1.9",
     "express": "^4.18.3",
     "holder": "^0.0.0",
     "holderjs": "^2.9.9",
