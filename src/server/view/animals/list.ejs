@@ -1,0 +1,32 @@
+<%- include('../partials/header.ejs') %> 
+<link href="../../../../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<main>
+    <div class="container">
+        <h1>List All Animals, Provided During Server</h1>
+    </div>
+    <div class="container">
+        <table id="animal-server-table" class="table ta">
+            <thead>
+                <tr>
+                    <th>Animal Name</th>
+                    <th>Number Of Heads</th>
+                    <th>Number Of Legs</th>
+                    <th>Sound</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for (let animal of animals) { %>
+                    <tr>
+                        <td><%= animal.name %></td>
+                        <td><%= animal.heads %></td>
+                        <td><%= animal.legs %></td>
+                        <td><%= animal.sound %></td>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+    </div>
+</main>
+
+<%- include('../partials/footer.ejs') %> 
