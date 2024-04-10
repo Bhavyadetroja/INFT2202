@@ -18,7 +18,8 @@
             <tbody>
                 <% for (let animal of animals) { %>
                     <tr>
-                        <td><%= animal.name %></td>
+                        <td><a href="<%= (animal.name) %>" href="./show.ejs"><%= animal.name %></a></td>
+
                         <td><%= animal.heads %></td>
                         <td><%= animal.legs %></td>
                         <td><%= animal.sound %></td>
